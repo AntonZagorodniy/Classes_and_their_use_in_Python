@@ -6,6 +6,9 @@ class Animal:
         self.can_fly = False
         self.can_run = False
 
+    def give_meat(self):
+        print('Можно пустить на мясо')
+
 
 class Bird(Animal):
     def __init__(self):
@@ -44,7 +47,7 @@ class Pig(Mammal):
     cry = "Hriuuu"
 
     def give_meat(self):
-        print('Свинья дает мясо')
+        print('Свинья дает много мяса')
 
 
 class Duck(Bird):
@@ -78,3 +81,4 @@ print(Zorca.give_milk())
 print(Boris.can_run)
 print(Mashka.cry)
 print(Ivan.living)
+print(Boris.give_meat())
