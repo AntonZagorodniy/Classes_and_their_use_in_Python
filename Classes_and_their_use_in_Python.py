@@ -3,82 +3,84 @@ class Animal:
     cry = ''
 
     def __init__(self):
-        self.can_fly = False
-        self.can_run = False
+        self.name = ''
 
     def give_meat(self):
         print('Можно пустить на мясо')
 
 
 class Bird(Animal):
-    def __init__(self):
-        self.can_fly = True
-        self.can_run = False
+    can_fly = True
 
 
 class Mammal(Animal):
-    def __init__(self):
-        self.can_run = True
-        self.can_fly = False
+    can_run = True
 
 
 class Cow(Mammal, Animal):
     cry = "Muuu"
 
     def give_milk(self):
-        print('Корова дает молоко')
+        print('{} дает молоко'. format(self.name))
 
 
 class Goat(Mammal):
     cry = "Beee"
 
     def give_goat_milk(self):
-        print('Коза дает козье молоко')
+        print('{} дает козье молоко'. format(self.name))
 
 
 class Sheep(Mammal):
     cry = "Meee"
 
     def give_wool(self):
-        print('Овца дает шерсть')
+        print('{} дает шерсть'. format(self.name))
 
 
 class Pig(Mammal):
     cry = "Hriuuu"
 
     def give_meat(self):
-        print('Свинья дает много мяса')
+        print('{} дает много мяса'. format(self.name))
 
 
 class Duck(Bird):
     cry = "Kriaa"
 
     def give_duck_fluff(self):
-        print('Утка дает утиное перо')
+        print('{} дает утиное перо'. format(self.name))
 
 
 class Chicken(Bird):
     cry = "Co-co-co"
 
     def give_eggs(self):
-        print('Курица дает яица')
+        print('{} дает яица'. format(self.name))
 
 
 class Goose(Bird):
     cry = "Ga-ga-ga"
 
     def give_goose_fluff(self):
-        print('Гусь дает гусиное перо')
+        print('{} дает гусиное перо'. format(self.name))
 
 
-Zorca = Cow()
-Boris = Pig()
-Ivan = Goose()
-Mashka = Goat()
+cow_1 = Cow()
+cow_1.name = 'Зорька'
+
+pig_1 = Pig()
+pig_1.name = 'Борис'
+
+goose_1 = Goose()
+goose_1.name = 'Иван'
+
+goat_1 = Goat()
+goat_1.name = 'Машка'
 
 
-print(Zorca.give_milk())
-print(Boris.can_run)
-print(Mashka.cry)
-print(Ivan.living)
-print(Boris.give_meat())
+print(cow_1.give_milk())
+print(pig_1.can_run)
+print(goat_1.cry)
+print(goose_1.living)
+print(pig_1.give_meat())
