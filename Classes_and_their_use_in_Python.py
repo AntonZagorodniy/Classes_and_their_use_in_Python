@@ -1,9 +1,9 @@
 class Animal:
     living = True
-    cry = ''
+    cry = 'Бормотание'
 
-    def __init__(self):
-        self.name = ''
+    def __init__(self, name):
+        self.name = name
 
     def give_meat(self):
         print('Можно пустить на мясо')
@@ -66,18 +66,13 @@ class Goose(Bird):
         print('{} дает гусиное перо'. format(self.name))
 
 
-cow_1 = Cow()
-cow_1.name = 'Зорька'
+cow_1 = Cow('Зорька')
 
-pig_1 = Pig()
-pig_1.name = 'Борис'
+pig_1 = Pig('Борис')
 
-goose_1 = Goose()
-goose_1.name = 'Иван'
+goose_1 = Goose('Иван')
 
-goat_1 = Goat()
-goat_1.name = 'Машка'
-
+goat_1 = Goat('Машка')
 
 print(cow_1.give_milk())
 print(pig_1.can_run)
